@@ -36,7 +36,7 @@ gem 'semantic-ui-sass'
 
 group :development, :test do
   # Call 'binding.pry' anywhere in the code to stop execution and get a debugger console
-  gem 'pry-rails', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-rails'
 end
 
 group :development do
