@@ -1,2 +1,15 @@
-<h1>Movies#show</h1>
-<p>Find me in app/views/movies/show.html.erb</p>
+<h1><%= "#{@movie.title}" %></h1>
+
+<div class="ui list">
+  <div class="item"><%= "Genre: #{@movie.genre}"%> </div>
+  <div class="item"><%= "Year: #{@movie.year}"%> </div>
+</div>
+
+<hr />
+
+<div class="ui secondary menu">
+  <%= link_to "Back", movies_path, class: "item" %>
+  <%= link_to "Edit", edit_movie_path, class: "item" %>
+  <%= link_to "Remove", movie_path(@movie), method: :delete, class: "item" %>
+  
+</div>

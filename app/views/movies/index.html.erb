@@ -1,3 +1,14 @@
 <%= button_to "Log Out", destroy_user_session_path, method: :delete %>
 
 <h1><%= "Welcome #{current_user.full_name}" %></h1>
+
+<div class="ui secondary menu">
+  <%= link_to "Add Movie", new_movie_path, class: "item" %>
+</div>
+
+<h2>Favorite Movies</h2>
+<div class="ui-list">
+  <% @movies.each do |movie| %>
+    <%= link_to "#{movie.title} (#{movie.year})", movie_path(movie), class: "item" %>
+  <% end %>
+</div>
